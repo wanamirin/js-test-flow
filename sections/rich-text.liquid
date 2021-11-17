@@ -1,3 +1,5 @@
+{%- if section.settings.hide_show -%}
+
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'section-rich-text.css' | asset_url }}" media="print" onload="this.media='all'">
 
@@ -22,6 +24,8 @@
     </div>
   </div>
 </div>
+
+{%- endif -%}
 
 {% schema %}
 {
@@ -62,6 +66,12 @@
       "id": "full_width",
       "default": true,
       "label": "t:sections.rich-text.settings.full_width.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_show",
+      "default": true,
+      "label": "Hide/Show"
     }
   ],
   "blocks": [
