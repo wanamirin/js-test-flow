@@ -1,0 +1,7 @@
+development:
+  password: shptka_d2b01210b7061f3c5beaf520d902e899
+  theme_id: "120639815930"
+  store: dev-work-flow.myshopify.com
+  ignore_files:
+    - config/settings_data.json
+    - ./theme.lock
