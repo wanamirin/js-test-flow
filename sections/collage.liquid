@@ -4,7 +4,10 @@
 
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
-<div class="collage-wrapper page-width{% if section.settings.heading == blank %} no-heading{% endif %}">
+
+{%- if section.settings.show_section -%}
+
+<div class="heyyy-{{section.settings.show_section}} collage-wrapper page-width{% if section.settings.heading == blank %} no-heading{% endif %}">
   <h2 class="collage-wrapper-title">{{ section.settings.heading | escape }}</h2>
 
   <div class="collage collage--{{ section.settings.desktop_layout }}{% if section.settings.mobile_layout == 'collage' %} collage--mobile{% endif %}">
@@ -56,7 +59,7 @@
                     <h3 class="card-information__text h4"><a href="{{ block.settings.product.url }}" class="full-unstyled-link">{{ block.settings.product.title | escape }}</a></h3>
                     <span class="price">{% render 'price', product: block.settings.product %}</span>
                   </div>
-                  
+
                   <div class="collage-card__image-wrapper media media--transparent media--hover-effect"
                     {% if focus_card_left and forloop.first %}
                       style="padding-bottom: {{ 1 | divided_by: featured_media.aspect_ratio | times: 100 }}%;"
@@ -344,12 +347,21 @@
   </div>
 </div>
 
+{%- endif -%}
+
+
 {% schema %}
 {
   "name": "t:sections.collage.name",
   "tag": "section",
   "class": "spaced-section collage-section",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_section",
+      "default": true,
+      "label": "Show section"
+    },
     {
       "type": "text",
       "id": "heading",
