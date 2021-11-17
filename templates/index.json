@@ -6,7 +6,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Hello world here",
+            "heading": "Hello world",
             "heading_size": "medium"
           }
         },
@@ -123,6 +123,7 @@
         "collection"
       ],
       "settings": {
+        "show_section": true,
         "heading": "Multimedia collage",
         "desktop_layout": "left",
         "mobile_layout": "collage"
@@ -134,7 +135,8 @@
         "heading": "Video",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
-        "full_width": false
+        "full_width": false,
+        "isVid": false
       }
     },
     "multi_column": {
