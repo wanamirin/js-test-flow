@@ -6,7 +6,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Hello world",
+            "heading": "Hello world here",
             "heading_size": "medium"
           }
         },
@@ -68,7 +68,8 @@
       ],
       "settings": {
         "color_scheme": "background-1",
-        "full_width": true
+        "full_width": true,
+        "hide_show": true
       }
     },
     "featured_products": {
