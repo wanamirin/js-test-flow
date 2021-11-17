@@ -1,7 +1,7 @@
 {{ 'video-section.css' | asset_url | stylesheet_tag }}
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
-<div class="video-section{% unless section.settings.full_width %} page-width{% endunless %}">
+<div class="video-section{% unless section.settings.full_width %} page-width{% endunless %}" {% unless section.settings.isVid %}style="display: none;"{% endunless %}>
   <div{% if section.settings.full_width %} class="page-width"{% endif %}>
     <h2 class="title">{{ section.settings.heading }}</h2>
   </div>
@@ -117,6 +117,11 @@
       "id": "full_width",
       "label": "t:sections.video.settings.full_width.label",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "isVid",
+      "label": "Show"
     }
   ],
   "presets": [
