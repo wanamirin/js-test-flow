@@ -123,7 +123,6 @@
         "collection"
       ],
       "settings": {
-        "show_section": true,
         "heading": "Multimedia collage",
         "desktop_layout": "left",
         "mobile_layout": "collage"
@@ -135,8 +134,7 @@
         "heading": "Video",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
-        "full_width": false,
-        "isVid": false
+        "full_width": false
       }
     },
     "multi_column": {
