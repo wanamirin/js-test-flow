@@ -23,6 +23,20 @@
   </div>
 </div>
 
+<script>
+
+  myWebResultsRenderedCallback = function(){
+     document.getElementsByClassName("gs-title")[0].style.fontSize = '30px';
+  };
+
+  window.__gcse || (window.__gcse = {});
+  window.__gcse.searchCallbacks = {
+    web: {
+      rendered: 'myWebResultsRenderedCallback',
+    },
+  };
+</script>
+
 {% schema %}
 {
   "name": "t:sections.page.name",
